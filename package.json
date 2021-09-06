@@ -1,0 +1,29 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "description": "My first project",
+  "main": "index.js",
+  "scripts": {
+    "android": "./node_modules/.bin/wdio ./config/wdio.conf.js PLATFORM=ANDROID",
+    "androidBS": "./node_modules/.bin/wdio ./config/androidBrowserStack.conf.js PLATFORM=ANDROID"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^7.10.1",
+    "@wdio/appium-service": "^7.10.1",
+    "@wdio/browserstack-service": "^7.11.1",
+    "@wdio/dot-reporter": "^7.10.1",
+    "@wdio/local-runner": "^7.11.1",
+    "@wdio/mocha-framework": "^7.11.1",
+    "@wdio/selenium-standalone-service": "^7.10.1",
+    "@wdio/spec-reporter": "^7.10.1",
+    "@wdio/sync": "^7.11.1",
+    "webdriverio": "^7.11.1"
+  },
+  "dependencies": {
+    "appium": "^1.21.0",
+    "browserstack-local": "^1.4.8",
+    "chai": "^4.3.4"
+  }
+}
