@@ -64,7 +64,7 @@ exports.config = {
     reporters: ['spec',
         //Capture video for each test if failed
         ['allure', {
-            outputDir: 'allure-report',
+            outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
             disableWebdriverScreenshotsReporting: true,
         }],
