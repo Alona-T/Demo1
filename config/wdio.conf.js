@@ -64,7 +64,7 @@ exports.config = {
     reporters: ['spec',
         //Capture video for each test if failed
         ['allure', {
-            outputDir: 'allure-results',
+            outputDir: 'allure-report',
             disableWebdriverStepsReporting: true,
             disableWebdriverScreenshotsReporting: true,
         }],
@@ -82,10 +82,9 @@ exports.config = {
         global.expect = chai.expect;
     },
 
-    after: async ({ error }) => {
-        if (error) {
-          await browser.takeScreenshot();
-          await browser.saveScreenshot("./screenshots/" + Date.now() + "-failed.png");   
-        }
+    afterTest: function(test){
+        if (test.error !== undefined) {
+            browser.takeScreenshot();
+          }
     }
 }

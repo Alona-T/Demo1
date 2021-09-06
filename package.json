@@ -22,6 +22,7 @@
     "webdriverio": "^7.11.1"
   },
   "dependencies": {
+    "allure-commandline": "^2.13.8",
     "appium": "^1.21.0",
     "browserstack-local": "^1.4.8",
     "chai": "^4.3.4"
